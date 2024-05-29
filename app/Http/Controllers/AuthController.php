@@ -6,12 +6,10 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
-use SebastianBergmann\CodeCoverage\BranchAndPathCoverageNotSupportedException;
 
 class AuthController extends Controller
 {
     public function index(){
-
         return view('auth.login');
     }
     public function login(Request $request){

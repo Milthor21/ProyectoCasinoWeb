@@ -12,7 +12,14 @@
     <H2>Ruleta de la fortuna</H2>
     <div class="ruleta">
         <img class="ruleta_img" src="img/rulet.png" alt="">
-        <img class="ruleta_banner" src="img/POSTER.png" alt="">
+        <div class="top">
+            <h1>Top 20 mejores jugadores</h1>
+            <ul>
+                @foreach ($topUsers as $user)
+                    <li>{{ $user->name }} <span>{{ $user->credito }}</span></li>
+                @endforeach
+            </ul>
+        </div>
     </div>
     <div class="btn-centrar">
         <a href="{{ route('jugar') }}" class="boton btn2">Jugar</a>

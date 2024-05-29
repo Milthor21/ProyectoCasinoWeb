@@ -19,7 +19,10 @@
             <a href="jugar">Jugar</a>
             <a href="creditos">Creditos</a>
             @auth
-                <a href="/logout">Logout</a>
+                <form class="boton2" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <input type="submit" value="Logout">
+                </form>
             @endauth
             @guest
                 <a href="/login">Login</a>

@@ -9,8 +9,11 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function index(){
+        $topUsers = User::orderBy('credito')->limit(20)->get();
 
-        return view('welcome');
+        return view('welcome', [
+            'topUsers' => $topUsers,
+        ]);
     }
     public function jugar(){
 

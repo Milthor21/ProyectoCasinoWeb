@@ -57,7 +57,8 @@ body {
     }
 }
 
-.navegacion-principal a{
+.navegacion-principal a,
+.navegacion-principal input {
     display: block;
     text-align: center;
     color: rgb(241, 211, 87);
@@ -66,6 +67,10 @@ body {
     font-weight: 700;
     padding: 1.5rem ;
     border-radius: 1rem;
+}
+.navegacion-principal input {
+    background-color: transparent;
+    border: none;
 }
 .navegacion-principal a:hover{
     background-color:rgb(210,171,10);
@@ -250,10 +255,19 @@ main.center {
     text-align: center;
     margin: 2rem 0;
 }
+ul { margin-top: 1rem}
+.top {overflow-y: auto;}
+li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 1.5rem 0 0.5rem 0;
+    border-bottom: 0.1rem dashed #000;
+}
 .ruleta {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     width: 90%;
     max-width: 120rem;
     margin: 0 auto;

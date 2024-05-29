@@ -9,13 +9,13 @@ class UsersApiController extends Controller
 {
     public function index(){
         $id = auth()->user()->id;
-        $user = User::find($id)->first();
+        $user = User::where('id', $id)->first();
 
-        return response()->json(['credito' => $user->credito], 200);
+        return response()->json(['credito' => $user->credito, 'id' => $id ,'usuario' => $user], 200);
     }
     public function guardar(string $creditos){
         $id = auth()->user()->id;
-        $user = User::find($id)->first();
+        $user = User::where('id',$id)->first();
         $user->credito = $creditos;
         $user->save();
 

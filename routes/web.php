@@ -21,7 +21,7 @@ Route::get('/creditos', [PageController::class, 'creditos'])->middleware('auth')
 Route::post('/creditos', [PageController::class, 'creditos_store']);
 Route::get('/login', [AuthController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/registrarse', [AuthController::class, 'register'])->middleware('guest')->name('register');
 Route::post('/registrarse', [AuthController::class, 'storeRegister']);
 
